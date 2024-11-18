@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SidebarLayout = ({ children }) => {
+const SidebarLayout = () => {
   const projects = [
     {
       title: "QRNG ML Classification",
