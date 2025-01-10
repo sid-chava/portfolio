@@ -85,7 +85,7 @@ const SidebarLayout = () => {
   ];
 
   return (
-    <div className="flex h-screen bg-gray-50">
+    <div className="flex h-screen bg-gray-50 overflow-y-auto">
       {/* Sidebar */}
       <div className="w-72 fixed h-full border-r border-gray-200 bg-white p-4">
         {/* Profile Section */}
@@ -183,21 +183,40 @@ const SidebarLayout = () => {
       </div>
 
       {/* Main Content Area */}
-      <div className="ml-72 flex-1 p-12">
+      <div className="ml-72 flex-1 p-12 overflow-y-auto">
         {/* Project Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div key={index} className="flex flex-col">
-              <div className="mb-2">
-                <div className="text-xs text-gray-500 mb-1">{project.category}</div>
-                <h2 className="text-xl font-normal text-black mb-2">{project.title}</h2>
-              </div>
-              <p className="text-xs text-gray-600 leading-relaxed">
-                {project.description}
-              </p>
-            </div>
-          ))}
-        </div>
+  {projects.map((project, index) => (
+    <div key={index} className="flex flex-col">
+      {project.link ? (
+        <a 
+          href={project.link} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="hover:opacity-75 transition-opacity"
+        >
+          <div className="mb-2">
+            <div className="text-xs text-gray-500 mb-1">{project.category}</div>
+            <h2 className="text-xl font-normal text-black mb-2">{project.title}</h2>
+          </div>
+          <p className="text-xs text-gray-600 leading-relaxed">
+            {project.description}
+          </p>
+        </a>
+      ) : (
+        <>
+          <div className="mb-2">
+            <div className="text-xs text-gray-500 mb-1">{project.category}</div>
+            <h2 className="text-xl font-normal text-black mb-2">{project.title}</h2>
+          </div>
+          <p className="text-xs text-gray-600 leading-relaxed">
+            {project.description}
+          </p>
+        </>
+      )}
+    </div>
+  ))}
+</div>
       </div>
     </div>
   );
