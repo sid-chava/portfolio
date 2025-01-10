@@ -5,7 +5,7 @@ const SidebarLayout = () => {
     {
       title: "QRNG ML Classification",
       description: "Used ML to prove that quantum random numbers can be detected from classical random numbers based on error signatures. Used Qiskit and IBM hardware to design and run quantum circuits.",
-      category: "SOFTWARE+RESEARCH",
+      category: "SOFTWARE",
       link: "https://github.com/dorahacksglobal/qc-classifier/tree/main"
     },
     {
