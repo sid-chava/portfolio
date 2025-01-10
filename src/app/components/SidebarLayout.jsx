@@ -5,43 +5,83 @@ const SidebarLayout = () => {
     {
       title: "QRNG ML Classification",
       description: "Used ML to prove that quantum random numbers can be detected from classical random numbers based on error signatures. Used Qiskit and IBM hardware to design and run quantum circuits.",
-      category: "SOFTWARE+RESEARCH"
+      category: "SOFTWARE+RESEARCH",
+      link: "https://github.com/dorahacksglobal/qc-classifier/tree/main"
     },
     {
       title: "Citi Bike ETL Pipeline",
       description: "Scraped Citi Bike data, cleaned and transformed it, and loaded it into a database to be used for analytics and visualization.",
-      category: "SOFTWARE"
+      category: "SOFTWARE",
+      link: "https://github.com/sid-chava/CitibikeETL"
     },
     {
       title: "Consensys Mesh Token Analytics Script",
       description: "A fully automated daily token script that provided analtics and tracking for the 50mm token portfolio of Consensys Mesh.",
-      category: "SOFTWARE"
+      category: "SOFTWARE",
     },
     {
       title: "Premier League Match Prediction",
-      description: "[In Progress] Using historical data to predict the outcome of Premier League matches. Also seeing if we can cluster teams around specific playstile types.",
-      category: "SOFTWARE"
+      description: "Using historical data to predict the outcome of Premier League matches. Also seeing if we can cluster teams around specific playstile types.",
+      category: "SOFTWARE",
+      link: "https://github.com/sid-chava/PAOffensiveClustering"
     },
     {
       title: "Classification of Quantum Errors",
       description: "Wrote a report to summarize the findings from our ML classification of quantum random numbers.",
-      category: "RESEARCH"
+      category: "RESEARCH",
+      link: "https://research.dorahacks.io/2024/09/06/ai-inspired-quantum-computer-classifier/"
     },
     {
       title: "Quantum PDE Solvers",
       description: "An overview of current research on approximating partial differential equations using quantum computers.",
-      category: "RESEARCH"
+      category: "RESEARCH",
+      link: "https://drive.google.com/file/d/1cGL-BEQ6bTkP-KVf9PxzqcUnx9fyE-5E/view?usp=sharing"
     },
     {
       title: "Commons Pitch Deck",
       description: "A pitch deck on Commons, a carbon tracking app, presented to judges from Sequoia, General Atlantic, and more. Tied for third at NYUVC.",
-      category: "SOURCING"
+      category: "SOURCING",
+      link: "https://drive.google.com/file/d/1X5RSGJNZb3TzG0pLAweenjVGqPWAs8pd/view?usp=sharing"
+    },
+    {
+      title: "Hathora Investement Memo",
+      description: "A comprehensive analysis of Hathora's market position, business model, and investment potential.",
+      category: "SOURCING",
+      link: "https://strategic-venture-society.notion.site/Hathora-Investment-Memorandum-1dd8554d3a5946efbdc892dd3ffc12c8?pvs=4"
+    },
+    {
+      title: "Modular and Shared Living Pitch",
+      description: "An analysis of the Modular and Shared Living industries complete with investment guidelines",
+      category: "SOURCING",
+      link: "https://drive.google.com/drive/folders/1KE6wivXtY8bUUX1yL4JFk7-1-7Bwrc6q?dmr=1&ec=wgc-drive-hero-goto"
     },
     {
       title: "Preset Pitch Deck",
-      description: "A pitch deck on Preset, a cloud layer for Apache Superset, the popular open source BI tool.",
-      category: "SOURCING"
+      description: "A pitch deck on Preset, an cloud layer built on top of the popular open source data visualization software, Apache Superset.",
+      category: "SOURCING",
+      link: "https://drive.google.com/file/d/1SjBsyrED4umpRKRUCbY4KxM3xjiTn--f/view?usp=drive_link"
+    },
+
+    {
+      title: "AI/ML Infrastructure Deep Dive",
+      description: "An in-depth look at AI and machine learning infrastructure, covering current trends, challenges, and future directions.",
+      category: "RESEARCH",
+      link: "https://strategic-venture-society.notion.site/SVS-AI-ML-Memo-be4074b618594fe1b85df5cff7f918e7"
+    },
+    {
+      title: "Mobileye IPO Analysis",
+      description: "An analysis of Mobileyes business, technology, outlook and recommendations on its 2022 IPO.",
+      category: "RESEARCH",
+      link: "https://drive.google.com/file/d/1S_PoDL4pP_6Zc9a0yH28J-0BqMHc4Cds/view?usp=sharing"
+
+    },
+    {
+      title: "Sports Gambling Industry Report",
+      description: "A in-depth analysis of the global sports gambling and betting industry.",
+      category: "RESEARCH",
+      link: "https://drive.google.com/file/d/1H9nE1qEXelAPM-AG6_pEYww80BANB0E9/view?usp=drive_link"
     }
+    
   ];
 
   return (
