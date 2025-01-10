@@ -87,7 +87,7 @@ const SidebarLayout = () => {
   return (
     <div className="flex h-screen bg-gray-50 overflow-y-auto">
       {/* Sidebar */}
-      <div className="w-72 fixed h-full border-r border-gray-200 bg-white p-4">
+      <div className="w-full md:w-72 fixed h-full border-r border-gray-200 bg-white p-4">
         {/* Profile Section */}
         <div className="mb-4 mt-2">
           <h2 className="text-sm text-black font-medium mb-1">Sid</h2>
@@ -126,18 +126,26 @@ const SidebarLayout = () => {
           <div>
             <p className="text-xs text-gray-400 mb-1">Software</p>
             <ul className="space-y-0.5">
-              {[
-                'QRNG ML Classification',
-                'Citi Bike ETL Pipeline',
-                'Consensys Mesh Token Analytics Script',
-                'Premier League Match Prediction'
-              ].map((item) => (
-                <li key={item}>
-                  <button className="text-xs text-gray-600 hover:text-black transition-all duration-200 opacity-60 hover:opacity-100 w-full text-left py-0.5 truncate">
-                    {item}
-                  </button>
-                </li>
-              ))}
+              {projects
+                .filter(project => project.category.includes('SOFTWARE'))
+                .map((project) => (
+                  <li key={project.title}>
+                    {project.link ? (
+                      <a 
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs text-gray-600 hover:text-black transition-all duration-200 opacity-60 hover:opacity-100 block py-0.5 truncate"
+                      >
+                        {project.title}
+                      </a>
+                    ) : (
+                      <span className="text-xs text-gray-600 block py-0.5 truncate opacity-60">
+                        {project.title}
+                      </span>
+                    )}
+                  </li>
+                ))}
             </ul>
           </div>
 
@@ -145,19 +153,26 @@ const SidebarLayout = () => {
           <div>
             <p className="text-xs text-gray-400 mb-1">Research</p>
             <ul className="space-y-0.5">
-              {[
-                'Quantum Error Signatures',
-                'Quantum PDE Solvers',
-                'AI/ML Infrastructure Deep Dive',
-                'Mobileye IPO Analysis',
-                'Sports Gambling Industry Report'
-              ].map((item) => (
-                <li key={item}>
-                  <button className="text-xs text-gray-600 hover:text-black transition-all duration-200 opacity-60 hover:opacity-100 w-full text-left py-0.5 truncate">
-                    {item}
-                  </button>
-                </li>
-              ))}
+              {projects
+                .filter(project => project.category.includes('RESEARCH'))
+                .map((project) => (
+                  <li key={project.title}>
+                    {project.link ? (
+                      <a 
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs text-gray-600 hover:text-black transition-all duration-200 opacity-60 hover:opacity-100 block py-0.5 truncate"
+                      >
+                        {project.title}
+                      </a>
+                    ) : (
+                      <span className="text-xs text-gray-600 block py-0.5 truncate opacity-60">
+                        {project.title}
+                      </span>
+                    )}
+                  </li>
+                ))}
             </ul>
           </div>
 
@@ -165,25 +180,33 @@ const SidebarLayout = () => {
           <div>
             <p className="text-xs text-gray-400 mb-1">Sourcing</p>
             <ul className="space-y-0.5">
-              {[
-                'Commons Pitch Deck',
-                'Preset Pitch Deck',
-                'Hathora Investment Memo',
-                'Modular and Shared Living Pitch Deck'
-              ].map((item) => (
-                <li key={item}>
-                  <button className="text-xs text-gray-600 hover:text-black transition-all duration-200 opacity-60 hover:opacity-100 w-full text-left py-0.5 truncate">
-                    {item}
-                  </button>
-                </li>
-              ))}
+              {projects
+                .filter(project => project.category === 'SOURCING')
+                .map((project) => (
+                  <li key={project.title}>
+                    {project.link ? (
+                      <a 
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs text-gray-600 hover:text-black transition-all duration-200 opacity-60 hover:opacity-100 block py-0.5 truncate"
+                      >
+                        {project.title}
+                      </a>
+                    ) : (
+                      <span className="text-xs text-gray-600 block py-0.5 truncate opacity-60">
+                        {project.title}
+                      </span>
+                    )}
+                  </li>
+                ))}
             </ul>
           </div>
         </nav>
       </div>
 
-      {/* Main Content Area */}
-      <div className="ml-72 flex-1 p-12 overflow-y-auto">
+      {/* Main Content Area - Hidden on mobile */}
+      <div className="hidden md:block md:ml-72 flex-1 p-12 overflow-y-auto">
         {/* Project Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
   {projects.map((project, index) => (
