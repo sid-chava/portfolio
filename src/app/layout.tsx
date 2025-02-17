@@ -3,19 +3,19 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 const geistSans = localFont({
-  src: "../fonts/GeistVF.woff",
+  src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
 const geistMono = localFont({
-  src: "../fonts/GeistMonoVF.woff",
+  src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
 });
 
 export const metadata: Metadata = {
   title: "Siddarth Chava",
-  description: "Research engineer dedicated to designing creative and intelligent systems",
+  description: "Research engineer dedicated to designing creative and intelligent systems.",
 };
 
 export default function RootLayout({
@@ -29,20 +29,6 @@ export default function RootLayout({
         <link
           rel="preconnect"
           href="https://fast.fonts.net"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="./fonts/GeistVF.woff"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="./fonts/GeistMonoVF.woff"
-          as="font"
-          type="font/woff2"
           crossOrigin="anonymous"
         />
       </head>
