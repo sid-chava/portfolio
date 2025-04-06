@@ -12,6 +12,24 @@ const ResumeIcon = dynamic(() => import('./icons/ResumeIcon'), { ssr: false });
 const SidebarLayout = () => {
   const projects = [
     {
+      title: "Gamified Natural Language To-do List",
+      description: "Used LLM's to process natural language to create tasks, assigning custom exp values for a gamified to-do list.",
+      category: "SOFTWARE",
+      link: "https://github.com/sid-chava/exp-task-tracker"
+    },
+    {
+      title: "LinkedIn Scraper/Parser/Outreach Tool",
+      description: "Integrated company data sources, used LLM for lead evaluation, and gmail api for end to end outreach automation.",
+      category: "SOFTWARE",
+      link: "https://sidchava.me"
+    },
+    {
+      title: "Daily Market Update",
+      description: "Set up a daily script to pull newsletters, turn them into vector embeddings, and used LLM's to summarize a daily market outlook including live data from Tiingo API.",
+      category: "SOFTWARE",
+      link: "https://nonewsletters.streamlit.app"
+    },
+    {
       title: "QRNG ML Classification",
       description: "Used ML to prove that quantum random numbers can be detected from classical random numbers based on error signatures. Used Qiskit and IBM hardware to design and run quantum circuits.",
       category: "SOFTWARE",
@@ -27,6 +45,7 @@ const SidebarLayout = () => {
       title: "Consensys Mesh Token Analytics Script",
       description: "A fully automated daily token script that provided analtics and tracking for the 50mm token portfolio of Consensys Mesh.",
       category: "SOFTWARE",
+      link: "https://sidchava.me"
     },
     {
       title: "Premier League Match Prediction",
