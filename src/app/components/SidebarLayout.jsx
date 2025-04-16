@@ -27,7 +27,7 @@ const SidebarLayout = () => {
       title: "Daily Market Update",
       description: "Set up a daily script to pull newsletters, turn them into vector embeddings, and used LLM's to summarize a daily market outlook including live data from Tiingo API.",
       category: "SOFTWARE",
-      link: "https://nonewsletters.streamlit.app"
+      link: "https://github.com/sid-chava/DailyDigest-EmailQA"
     },
     {
       title: "QRNG ML Classification",
